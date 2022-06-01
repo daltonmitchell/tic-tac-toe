@@ -1,0 +1,32 @@
+h1, p {
+    text-align: center;
+    font-style: bold;
+}
+
+#game-board {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    width: 400px;
+    height: 400px;
+    margin: auto;
+}
+
+.cells {
+    text-align: center;
+    height: 133.33px;
+    width: 133.33px;
+    line-height: 130px;
+    font: 100px solid black;
+}
+
+#a1, #a2, #a3, #b1, #b2, #b3, #c1, #c2, #c3 {
+    background: #ccc
+}
+
+#reset {
+    background: red;
+    font: black;
+    margin-top: 50px;
+    float: right;
+}
