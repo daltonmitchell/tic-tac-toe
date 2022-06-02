@@ -125,6 +125,9 @@ function handleClick(evt) {
         resultMessage.innerText = 'Player 2 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
         playerTurn.innerText = '';
+    } else if((space1.innerText + space2.innerText + space3.innerText + space4.innerText + space5.innerText + space6.innerText + space7.innerText + space8.innerText + space9.innerText).length === 9) {
+        resultMessage.innerText = "It's a draw!"
+        playerTurn.innerText = '';
     }
     
     evt.target.removeEventListener('click', handleClick);
