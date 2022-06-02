@@ -16,6 +16,8 @@ let space7 = document.getElementById('c1')
 let space8 = document.getElementById('c2')
 let space9 = document.getElementById('c3')
 
+let playerTurn = document.querySelector('#playerTurn');
+
 
 
 
@@ -54,49 +56,69 @@ function handleClick(evt) {
        clickedCell.innerText = 'O';
        currentPlayer = 0;
     }
+
+    turnDisplay();
     
     if(space1.innerText + space2.innerText + space3.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space4.innerText + space5.innerText + space6.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space7.innerText + space8.innerText + space9.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space1.innerText + space4.innerText + space7.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space2.innerText + space5.innerText + space8.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space3.innerText + space6.innerText + space9.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space1.innerText + space5.innerText + space9.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space3.innerText + space5.innerText + space7.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space1.innerText + space2.innerText + space3.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space4.innerText + space5.innerText + space6.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space7.innerText + space8.innerText + space9.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space1.innerText + space4.innerText + space7.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space2.innerText + space5.innerText + space8.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space3.innerText + space6.innerText + space9.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space1.innerText + space5.innerText + space9.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     } else if(space3.innerText + space5.innerText + space7.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
+        boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
     }
     
     evt.target.removeEventListener('click', handleClick);
 }
 
+
+
 function turnDisplay() {
     if(currentPlayer === 0){
-        document.getElementById('#playerTurn').innerText = "Player 1's (X) turn!"
-    } else {
-        document.getElementById('#playerTurn').innerText = "Player 2's (0) turn!"
+        playerTurn.innerText = "Player 1's (X) turn!";
+    } else if(currentPlayer === 1){
+        playerTurn.innerText = "Player 2's (0) turn!";
     }
 }
 
