@@ -62,51 +62,67 @@ function handleClick(evt) {
     if(space1.innerText + space2.innerText + space3.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space4.innerText + space5.innerText + space6.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space7.innerText + space8.innerText + space9.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space1.innerText + space4.innerText + space7.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space2.innerText + space5.innerText + space8.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space3.innerText + space6.innerText + space9.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space1.innerText + space5.innerText + space9.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space3.innerText + space5.innerText + space7.innerText === 'XXX') {
         resultMessage.innerText = 'Player 1 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space1.innerText + space2.innerText + space3.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space4.innerText + space5.innerText + space6.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space7.innerText + space8.innerText + space9.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space1.innerText + space4.innerText + space7.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space2.innerText + space5.innerText + space8.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space3.innerText + space6.innerText + space9.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space1.innerText + space5.innerText + space9.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     } else if(space3.innerText + space5.innerText + space7.innerText === 'OOO') {
         resultMessage.innerText = 'Player 2 wins!';
         boardSpaces.forEach(cell => cell.removeEventListener('click', handleClick));
+        playerTurn.innerText = '';
     }
     
     evt.target.removeEventListener('click', handleClick);
@@ -123,6 +139,7 @@ function turnDisplay() {
 }
 
 function restartGame() {
+    turnDisplay();
     space1.innerText = '';
     space2.innerText = '';
     space3.innerText = '';
