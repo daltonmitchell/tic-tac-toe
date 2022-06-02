@@ -51,9 +51,11 @@ function handleClick(evt) {
 
     if(currentPlayer === 0){
        clickedCell.innerText = 'X';
+       clickedCell.style.fontFamily = 'Original Surfer'
        currentPlayer = 1;
     } else if(currentPlayer === 1){
        clickedCell.innerText = 'O';
+       clickedCell.style.fontFamily = 'Original Surfer'
        currentPlayer = 0;
     }
 

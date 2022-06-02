@@ -1,11 +1,20 @@
+body {
+    background: burlywood;
+}
+
 h1, p {
     text-align: center;
     font-style: bold;
 }
 
+h1 {
+    font-family: 'Original Surfer', cursive; 
+    font-size: 100px;
+    margin: 0;
+}
+
 #game-board {
     display: grid;
-    gap: 5px;
     grid-template-columns: repeat(3, 1fr);
     width: 400px;
     height: 400px;
@@ -18,15 +27,44 @@ h1, p {
     width: 133.33px;
     line-height: 130px;
     font: 100px solid black;
+    border: 5px solid black;
 }
 
-#a1, #a2, #a3, #b1, #b2, #b3, #c1, #c2, #c3 {
-    background: #ccc
+#playerTurn {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    font-family: 'Original Surfer', cursive;
+    font-size: 25px;
+}
+
+#a1, #a2, #a3 {
+    border-top: none;
+}
+
+#a1, #b1, #c1 {
+    border-left: none;
+}
+
+#a3, #b3, #c3 {
+    border-right: none;
+}
+
+#c1, #c2, #c3 {
+    border-bottom: none;
+}
+
+#resultMessage {
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Original Surfer', cursive;
+    font-size: 50px;
 }
 
 #reset {
-    background: red;
-    font: black;
+    background: rgb(232, 204, 151);
+    font-family: 'Original Surfer', cursive;
+    font: 20px solid brown;
     margin-top: 50px;
+    margin-right: 150px;
     float: right;
 }
