@@ -1,4 +1,5 @@
 /*----- constants -----*/
+
 let playerOne = 0;
 let playerTwo = 1;
 
@@ -18,31 +19,15 @@ let space9 = document.getElementById('c3')
 
 let playerTurn = document.querySelector('#playerTurn');
 
-
-
-
 /*----- app's state (variables) -----*/
-
-space1.value = '';
-space2.value = '';
-space3.value = '';
-space4.value = '';
-space5.value = '';
-space6.value = '';
-space7.value = '';
-space8.value = '';
-space9.value = '';
-
-
 /*----- cached element references -----*/
 
 let currentPlayer = Math.round(Math.random())
 
 /*----- event listeners -----*/
+
 boardSpaces.forEach(cell => cell.addEventListener('click', handleClick));
 document.querySelector('#reset').addEventListener('click', restartGame);
-
-
 
 /*----- functions -----*/
 
